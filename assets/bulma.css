@@ -1,3 +1,11 @@
+body {
+    background-image: url("C:\Users\James Levesque\get-in-the-repo-shinji\assets\miika-laaksonen-nUL9aPgGvgM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .button, .input, .textarea, .select select, .file-cta,
