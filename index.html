@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,40 +8,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/bulma.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
-        <nav class="level has-background-dark ">
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="index.html">Home</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="anime.html">Anime assistant</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <img src="assets/page logo.png" alt="anime sensei page logo" style="height:75px" >
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="manga.html">Manga </a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="team.html">Team Picks</a>
-            </p>
-          </nav>
-          <section class="hero ">            
-            <div class="hero-body">
-            <img src="assets/hero image.jpg" alt="graffiti art of Akira">  
-              <p class="title">
-                Hero title
-              </p>
-              <p class="subtitle">
-                Hero subtitle
-              </p>
+      <body>
+        
+        <nav class="level has-background-dark" style="z-index: 10;">
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <a class="link is-info has-text-white" href="index.html">Home</a>
+          </p>
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <a class="link is-info has-text-white" href="anime.html">Anime assistant</a>
+          </p>
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <img src="assets/page logo.png" alt="anime sensei page logo" style="height:75px" >
+          </p>
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <a class="link is-info has-text-white" href="manga.html">Manga </a>
+          </p>
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <a class="link is-info has-text-white" href="team.html">Team Picks</a>
+          </p>
+        </nav>
+        <div class="slideshow"> 
+          <div class="slide" style="background-image: url('assets/gifs/tumblr_b02123422d3a01beceb04835b871cfc1_5ee27c2d_1280.gif')"></div>
+       
+        </div>
+          
+         <section class="hero is-fullheight is-overlay" >
+         
+            <div class="hero-body " >
+              
+              <div class="container ">
+                <div class="columns is-centered">
+                  <div class="column is-4">
+                    <div class="card "  style="opacity: 0.85;">
+                      <div class="card-content has-text-centered ">
+                        <p class="title is-small">
+                          Info card of sites purpose
+                        </p>
+                        <p class="subtitle">
+                          <div class="box">
+                            Content goes here...
+                           <!-- <img src="" alt="">-->
+                          </div>
+                          
+                        </p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="column is-4">
+                    <div class="card"  style="opacity: 0.85;">
+                      <div class="card-content has-text-centered">
+                        <p class="title">
+                          Screen shot and link directly to anime assistant
+                        </p>
+                        <p class="subtitle">
+                          <div class="box">
+                            OTHER STATIC INFO!
+                          </div>
+                          <button class="button is-outlined is-dark" >Submit</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-4">
+                    <div class="card" style="opacity: 0.85;">
+                      <div class="card-content has-text-centered">
+                        <p class="title">
+                          Screen shot and link directly to manga assistant
+                        </p>
+                        <p class="subtitle">
+                          <div class="box">
+                            EVEN MORE STATIC INFO!
+                          </div>
+                          <button class="button is-outlined is-dark" >Submit</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
-          <div class="container">
-            <div class="notification is-primary">
-              This container is <strong>centered</strong> on desktop and larger viewports.
-            </div>
-          </div>
+             
+         
         <script src="script.js" async defer></script>
     </body>
 </html>
