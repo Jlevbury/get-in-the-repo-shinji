@@ -1,85 +1,162 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/bulma.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
-    <body>
-        <nav class="level has-background-dark ">
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="index.html">Home</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="anime.html">Anime assistant</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <img src="assets/page logo.png" alt="anime sensei page logo" style="height:75px" >
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="manga.html">Manga </a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="team.html">Team Picks</a>
-            </p>
-          </nav>
-          <section class="hero ">            
-            <div class="hero-body">
-            <img src="" alt="">  
-              <p class="title">
-                Team Recommendations
-              </p>
-              <p class="subtitle">
-                Want to know what picks the team puts at the top of the list? Take a look at our references and find the arc that suites your taste!
-              </p>
-            </div>
-          </section>
-          <div class="container">
-            <div class="notification has-background-info">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">Dominick's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header>  
-                    </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-          <div class="container">
-            <div class="notification has-background-danger">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">James's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header> 
-                      </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-          <div class="container">
-            <div class="notification has-background-info">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">Jesse's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header> 
-                      </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-        <script src="script.js" async defer></script>
-    </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<title></title>
+		<meta
+			name="description"
+			content=""
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/bulma.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/style.css"
+		/>
+	</head>
+	<body
+		style="
+			background-image: url(assets/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg);
+			background-size: contain;
+		"
+	>
+		<nav class="level has-background-black">
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="index.html"
+					>Home</a
+				>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="anime.html"
+					>Anime assistant</a
+				>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<img
+					src="assets/page logo.png"
+					alt="anime sensei page logo"
+					style="height: 75px"
+				/>
+			</p>
+
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="manga.html"
+					>Manga
+				</a>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="team.html"
+					>Team Picks</a
+				>
+			</p>
+		</nav>
+		<section class="hero">
+			<div
+				class="hero-body is-outlined has-background-grey-dark"
+				style="opacity: 0.85"
+			>
+				<img
+					src=""
+					alt=""
+				/>
+				<p class="title has-text-white">Team Recommendations</p>
+				<p class="subtitle has-text-white">
+					Want to know what picks the team puts at the top of the list? Take a
+					look at our references and find the arc that suites your taste!
+				</p>
+			</div>
+		</section>
+		<br />
+		<div class="columns">
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.85"
+				>
+					<div class="card-image">
+						<figure class="image is-2by1">
+							<img
+								src="path/to/image1.jpg"
+								alt="Image 1"
+							/>
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="content has-text-centered">
+							<p>Dominick's picks</p>
+							<p>PLACEHOLDER FOR PERSONAL RECS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.85"
+				>
+					<div class="card-image">
+						<figure class="image is-2by1"><img src= "></figure>
+					</div>
+					<div class="card-content">
+						<div class="content has-text-centered">
+							<p style="background-color: #1d1a2f color#8bd450">James' picks</p>
+							<p>PLACEHOLDER FOR PERSONAL RECS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.85"
+				>
+					<div class="card-image">
+						<figure class="image is-2by1">
+							<img
+								src="path/to/image3.jpg"
+								alt="Image 3"
+							/>
+						</figure>
+					</div>
+					<div class="card-content is-centered">
+						<div class="content has-text-centered">
+							<p>Jesses' picks</p>
+							<p>PLACEHOLDER FOR PERSONAL RECS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="script.js"
+			async
+			defer
+		></script>
+	</body>
 </html>
