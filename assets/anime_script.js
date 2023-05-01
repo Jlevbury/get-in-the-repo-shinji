@@ -128,4 +128,3 @@ async function fetchAnimeData(selectedValues, apiUrl, headers) {
 
 
   });
-  
