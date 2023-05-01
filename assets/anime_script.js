@@ -67,3 +67,6 @@ animeBtn.addEventListener("click", function() {
   console.log(selectedValues);
 });
 
+function pickTitles(){
+	var apiURL=`https://api.myanimelist.net/v2/anime?q=${selectedValues}&limit=10`;
+}
