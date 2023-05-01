@@ -9,21 +9,51 @@ const headers = new Headers({
 var animeBtn = document.getElementById("animeBtn");
 
 // Add a click event listener to the submit button
+// Add a click event listener to the submit button
 animeBtn.addEventListener("click", async function () {
-  // Get the select element and its selected options
-  var select = document.querySelector("select");
-  var selectedOptions = Array.from(select.selectedOptions);
+	// Get the select element and its selected options
+	var select = document.querySelector("select");
+	var selectedOptions = Array.from(select.selectedOptions);
+  
+	// Map the selected options to their values
+	var selectedValues = selectedOptions.map((option) => option.value);
+  
+	// Log the selected values to the console
+	console.log(selectedValues);
+  
+	// Call the API with the selected values
+	const animeData = await fetchAnimeData(selectedValues, apiUrl, headers);
+  
+	// Get the results div element
+	const resultsDiv = document.getElementById("animeResult");
+  
+	// Clear previous results
+	resultsDiv.innerHTML = '';
+  
+	// Loop through the animeData array and create elements for each item
+	animeData.forEach((item) => {
+	  // Create a container div element for the item
+	  const itemDiv = document.createElement("div");
+	  itemDiv.className = "anime-item";
+  
+	  // Set the content of the item div with separate elements for each property
+	  itemDiv.innerHTML = `
+		<h3>${item.title}</h3>
+		<img src="${item.picture_url}" alt="${item.title}">
+		<p>Rank: ${item.rank}</p>
+		<p>Type: ${item.type}</p>
+		<p>Aired on: ${item.aired_on}</p>
+	  `;
+  
+	  // Append the item div to the results div
+	  resultsDiv.appendChild(itemDiv);
+	});
+  
+	console.log(animeData);
+  });
+  
+  
 
-  // Map the selected options to their values
-  var selectedValues = selectedOptions.map((option) => option.value);
-
-  // Log the selected values to the console
-  console.log(selectedValues);
-
-  // Call the API with the selected values
-  const animeData = await fetchAnimeData(selectedValues, apiUrl, headers);
-  console.log(animeData);
-});
 
 async function fetchAnimeData(selectedValues, apiUrl, headers) {
 	// Concatenate the selected values into a single string
@@ -44,11 +74,17 @@ async function fetchAnimeData(selectedValues, apiUrl, headers) {
   
 	  // Parse the JSON response
 	  const responseData = await response.json();
-	  return responseData;
-	} catch (error) {
+  
+	  // Slice the responseData array to get the first 5 items
+	  const firstFiveItems = responseData.slice(0, 5);
+  
+	  return firstFiveItems;
+	 
+		} catch (error) {
 	  // Handle network error
 	  console.error("API request failed with network error", error);
 	  return null;
 	}
   }
+
   
