@@ -6,7 +6,7 @@ const accessToken =
 var animeList = [];
 
 /// Function to fetch the anime data from the MyAnimeList API
-async function fetchAnimeData() {
+/*async function fetchAnimeData() {
 	try {
 		const response = await fetch(apiEndpoint, {
 			headers: {
@@ -25,7 +25,7 @@ async function fetchAnimeData() {
 		return null;
 	}
 }
-
+fetchAnimeData();
 // Function to generate a list of 10 random anime titles and descriptions
 function generateRandomAnimeList(animeList) {
 	const randomList = [];
@@ -50,7 +50,7 @@ function generateRandomAnimeList(animeList) {
 		)
 		.catch((error) => console.error(error));
 });*/
-// Get the submit button element
+/* Get the submit button element
 var animeBtn = document.getElementById("animeBtn");
 
 // Add a click event listener to the submit button
@@ -67,6 +67,98 @@ animeBtn.addEventListener("click", function() {
   console.log(selectedValues);
 });
 
-function pickTitles(){
-	var apiURL=`https://api.myanimelist.net/v2/anime?q=${selectedValues}&limit=10`;
+//function pickTitles(){
+//	var apiURL=`https://api.myanimelist.net/v2/anime?q=${selectedValues}&limit=3`;
+//}
+async function queryAnimeRanking() {
+	const apiUrl = "https://api.myanimelist.net/v2/anime/ranking";
+  
+	// Set up the headers for the API request
+	const headers = new Headers();
+	headers.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijc5ZWRkMzNhZWYxYjFjOTFjM2IxY2JhZTUzZWFkMjQ1MjI3YWE5MzliODVkNmVmNWJhNzA0ZTUxZjNjNzBkYWM1NmEwNGFmMjAxM2M5MTIwIn0.eyJhdWQiOiI4NzgxZDk1YjFlMGJmYWM3NGYyMWIxYTMzOWE1ZjBjYiIsImp0aSI6Ijc5ZWRkMzNhZWYxYjFjOTFjM2IxY2JhZTUzZWFkMjQ1MjI3YWE5MzliODVkNmVmNWJhNzA0ZTUxZjNjNzBkYWM1NmEwNGFmMjAxM2M5MTIwIiwiaWF0IjoxNjgyNjE3NDM1LCJuYmYiOjE2ODI2MTc0MzUsImV4cCI6MTY4NTIwOTQzNSwic3ViIjoiMTY2Mzg4NTciLCJzY29wZXMiOltdfQ.WhvhfOQ9_XjWel2NEU0IGBEqpWstPde69JR-no0-OVzmyJclfhpUnhffxsr1r8uxO0d23QMZS38JUAMRst3_Rl6q111sN1xSf5wvf0MddG5zmS-XLgMgBTP5R4xxamCiwUBr0EZpSIjxo49DZMQ9wV7omeqPe-a8ojW-X86LdDhrR0Ml9-16-GNpWPhNc7CFmG_CcudDSl2_HSXYiI1UyVtrNnCqw8KM9vfW0LWbprlyOyQe1WxzTmzG9wJAcZ_C6brzI4i2QWK15Ec73bOEXXfzYaYlXD9k8Lxmpm8N8AsBFMU16MmFH0lNnxALA9vJGv8tnrujNUO_76QeXLkOQQ");
+  
+	// Build the query parameters for the API request
+	const queryParameters = new URLSearchParams();
+	queryParameters.append("ranking_type", "all");
+	queryParameters.append("limit", "4");
+  
+	// Build the API URL with the query parameters
+	const url = `${apiUrl}?${queryParameters.toString()}`;
+  
+	try {
+	  // Make the API request using fetch
+	  const response = await fetch(url, { headers });
+  
+	  if (!response.ok) {
+		// Handle error response
+		console.error(`API request failed with status code ${response.status}`);
+		return null;
+	  }
+  
+	  // Parse the JSON response
+	  const responseData = await response.json();
+	  return responseData;
+	} catch (error) {
+	  // Handle network error
+	  console.error("API request failed with network error", error);
+	  return null;
+	}
+
+
+  }*/
+// Get the submit button element
+var animeBtn = document.getElementById("animeBtn");
+
+// Add a click event listener to the submit button
+animeBtn.addEventListener("click", async function() {
+  // Get the select element and its selected options
+  var select = document.querySelector('select');
+  var selectedOptions = Array.from(select.selectedOptions);
+
+  // Map the selected options to their values
+  var selectedValues = selectedOptions.map(option => option.value);
+
+  // Log the selected values to the console
+  console.log(selectedValues);
+
+  // Call the API with the selected values
+  const animeData = await queryAnimeRanking(selectedValues);
+  console.log(animeData);
+});
+
+async function queryAnimeRanking(selectedValues) {
+  const apiUrl = "https://api.myanimelist.net/v2/anime";
+
+  // Set up the headers for the API request
+  const headers = new Headers();
+  headers.append("Authorization", "Bearer YOUR_TOKEN");
+
+  // Build the query parameters for the API request
+  const queryParameters = new URLSearchParams();
+  queryParameters.append("q", selectedValues.join(","));
+  queryParameters.append("limit", "3");
+
+  // Build the API URL with the query parameters
+  const url = `${apiUrl}?${queryParameters.toString()}`;
+
+  try {
+    // Make the API request using fetch
+    const response = await fetch(url, { headers });
+
+    if (!response.ok) {
+      // Handle error response
+      console.error(`API request failed with status code ${response.status}`);
+      return null;
+    }
+
+    // Parse the JSON response
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    // Handle network error
+    console.error("API request failed with network error", error);
+    return null;
+  }
 }
+
+
