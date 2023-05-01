@@ -40,7 +40,7 @@ function generateRandomAnimeList(animeList) {
 }
 
 // Event listener for button click
-document.getElementById("anime-button").addEventListener("click", function () {
+/*document.getElementById("anime-button").addEventListener("click", function () {
 	fetchAnimeData()
 		.then((animeList) => generateRandomAnimeList(animeList))
 		.then(
@@ -49,4 +49,21 @@ document.getElementById("anime-button").addEventListener("click", function () {
 					randomList.join("<br><br>"))
 		)
 		.catch((error) => console.error(error));
+});*/
+// Get the submit button element
+var animeBtn = document.getElementById("animeBtn");
+
+// Add a click event listener to the submit button
+animeBtn.addEventListener("click", function() {
+  // Get the select element and its selected options
+  var select = document.querySelector('select');
+  var selectedOptions = Array.from(select.selectedOptions);
+
+  // Map the selected options to their values
+  var selectedValues = selectedOptions.map(option => option.value);
+
+  // Log the selected values to the console
+  console.log("click");
+  console.log(selectedValues);
 });
+
