@@ -39,7 +39,7 @@ mangaBtn.addEventListener("click", async function () {
 		<img src="${item.picture_url}" alt="${item.title}">
 		<p>Rank: ${item.rank}</p>
 		<p>Type: ${item.type}</p>
-		<p>Aired on: ${item.aired_on}</p>
+		<p>published: ${item.aired_on}</p>
 	  `;
   
 	  // Append the item div to the results div
