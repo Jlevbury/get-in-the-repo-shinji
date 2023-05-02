@@ -1,5 +1,7 @@
 //Constants
+
 const apiUrl = "https://myanimelist.p.rapidapi.com/manga/top";
+
 const headers = new Headers({
 	'X-RapidAPI-Key': '2a8860bed8mshb5bc10768805e3dp1aad13jsn412b7483e58a',
     'X-RapidAPI-Host': 'myanimelist.p.rapidapi.com'
@@ -11,6 +13,7 @@ mangaBtn.addEventListener("click", async function () {
 	// Get the select element and its selected options
 	var select = document.querySelector("select");
 	var selectedOptions = Array.from(select.selectedOptions);
+
   
 	// Map the selected options to their values
 	var selectedValues = selectedOptions.map((option) => option.value);
@@ -83,5 +86,6 @@ async function fetchMangaData(selectedValues, apiUrl, headers) {
 	  return null;
 	}
   }
+
 
   
