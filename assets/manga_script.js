@@ -22,7 +22,7 @@ mangaBtn.addEventListener("click", async function () {
 	const mangaData = await fetchMangaData(selectedValues, apiUrl, headers);
   
 	// Get the results div element
-	const resultsDiv = document.getElementById("mangaResult");
+	const resultsDiv = document.getElementById("mangaResults");
   
 	// Clear previous results
 	resultsDiv.innerHTML = '';
