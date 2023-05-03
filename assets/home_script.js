@@ -2,12 +2,40 @@
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const resultDiv = document.getElementById("resultDiv");
+const searchHistoryDropdown = document.getElementById("searchHistoryDropdown");
+const animeOrMangaDropdown = document.getElementById("animeOrMangaDropdown");
+
+// Get search history from local storage
+let searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+
+// Update the search history dropdown with saved search history
+function updateSearchHistoryDropdown() {
+  searchHistoryDropdown.innerHTML = "";
+  searchHistory.forEach((searchTerm) => {
+    const option = document.createElement("option");
+    option.value = searchTerm;
+    searchHistoryDropdown.appendChild(option);
+  });
+}
+
+// Add a search term to the search history array and update local storage and dropdown
+function addSearchTermToHistory(searchTerm) {
+    if (!searchHistory.includes(searchTerm)) {
+      searchHistory.push(searchTerm);
+      localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+      updateSearchHistoryDropdown();
+    }
+}
 
 // Attach an event listener to the search button
 searchButton.addEventListener("click", async () => {
-  // Get the anime name from the search input
-  const animeName = searchInput.value;
-
+  // Get the anime/manga name from the search input
+  const animeOrManga = animeOrMangaDropdown.value;
+  const animeOrMangaPath = (animeOrManga === "anime") ? "anime" : "manga";
+  const animeOrMangaDisplayName = (animeOrManga === "anime") ? "Anime" : "Manga";
+  const searchTerm = searchInput.value;
+  // Add the search term to the search history and update the dropdown
+  addSearchTermToHistory(searchTerm);  
   // Set up the API URL and options
   const url = `https://myanimelist.p.rapidapi.com/anime/search/${animeName}/10`;
   const options = {
@@ -17,7 +45,7 @@ searchButton.addEventListener("click", async () => {
       "X-RapidAPI-Host": "myanimelist.p.rapidapi.com",
     },
   };
-
+ // Fetch data from the API
   try {
     // Send a request to the API and get the response
     const response = await fetch(url, options);
