@@ -29,7 +29,8 @@ N/A
 
 ## Usage
 
-
+![AAscreencap](https://user-images.githubusercontent.com/125767916/236002752-6c3d945f-cb31-4299-8d1b-61c6a5f28209.gif)
+The typical user flow for the Anime Assitant.
 
 ## Credits
 
