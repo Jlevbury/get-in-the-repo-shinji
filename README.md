@@ -33,6 +33,10 @@ N/A
 
 The typical user flow for the Anime Assitant.
 
+![MANscreencap](https://user-images.githubusercontent.com/125767916/236020708-42e95c27-5208-4c6d-9670-36311edbf458.gif)
+
+The typical user flow for the Manga finder.
+
 ## Credits
 
 
