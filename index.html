@@ -1,4 +1,3 @@
-HTML:
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +11,8 @@ HTML:
         <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
+      <body>
+        
         <nav class="level has-background-black" style="z-index: 10;">
           <p class="level-item has-text-centered has-text-weight-semibold">
             <a class="link is-info has-text-white" href="index.html">Home</a>
@@ -31,80 +32,41 @@ HTML:
         </nav>
         <div class="slideshow"> 
           <div class="slide" style="background-image: url('assets/gifs/tumblr_b02123422d3a01beceb04835b871cfc1_5ee27c2d_1280.gif')"></div>
+       
         </div>
          
-        <section class="hero is-fullheight is-overlay">
-          <div class="hero-body">
-            <div class="column is-12">
-              <div class="card" style="opacity: 0.85;">
-                <div class="card-content has-text-centered">
-                  <p class="title is-small">
-                    Search for any Anime or Manga title:
-                  </p>
-                  <form id="searchForm">
-                    <div class="field has-addons">
-                      <div class="control">
-                        <div class="select">
-                          <select id="anime-MangaDropdown">
-                            <option value="anime" id="animeChoice">Anime</option>
-                            <option value="manga" id="mangaChoice">Manga</option>
-                          </select>
-                        </div>
+         <section class="hero is-fullheight is-overlay" >         
+            <div class="hero-body " >  
+              <div class="column is-12">
+                <div class="card "  style="opacity: 0.85;">
+                  <div class="card-content has-text-centered ">
+                    <p class="title is-small">
+                     SEARCH BAR TITLE
+                    </p>
+                    <p class="subtitle">
+                      <div class="box">
+                       SEARCH ITEMS IN THIS BOX  
                       </div>
-                      <div class="control search-control">
-                        <input class="input is-expanded" type="text" placeholder="Search anime.." id="searchInput">
-                      </div>
-                      <div class="control">
-                        <button class="button is-outlined is-dark" type="button" id="searchButton">Search</button>
-                      </div>
-                    </div>
-                  </form>
-                  <hr>
-                  <div class="columns is-multiline is-centered">
-                    <div class="column is-6">
-                      <div id="searchHistoryDropdown" class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                          <button class="button is-light" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <span>Search History</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
-                          <button class="button is-outlined is-danger" id="clearHistoryButton">Clear History</button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                          <div class="dropdown-content" id="searchHistory">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <div class="column is-12"> -->
-                      <div class="table-container is-12">
-                        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                          <tbody id="resultTable">
-                          </tbody>
-                        </table>
-                      </div>
-                    <!-- </div> -->
-                    </div>
+                      <p> Click below to check out titles suggested by the team!</p>
+                      <a href="team.html">
+                        <button class="button is-outlined is-dark" >Team picks</button>
+                        </a>
+                    </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>                                  
+                </div>                         
               <div class="container ">
                 <div class="columns is-centered">
                   <div class="column is-4">
                     <div class="card "  style="opacity: 0.85;">
                       <div class="card-content has-text-centered ">
                         <p class="title is-small">
-                         placeholder
+                         Sensei Recommendations
                         </p>
                         <p class="subtitle">
                           <div class="box">
                             Anime Sensei is here to help you discover new Anime and Manga titles , your digital senpai will always notice you!
 
-                           <!-- <img src="" alt="">-->
+                           <img src="assets/EIyNaKPUYAAxw_e.png" alt="Denji and power 1M IQ">
                           </div>
                           <p> Click below to check out titles suggested by the team!</p>
                           <a href="team.html">
@@ -136,11 +98,11 @@ HTML:
                     <div class="card" style="opacity: 0.85;">
                       <div class="card-content has-text-centered">
                         <p class="title">
-                          Screen shot and link directly to manga assistant
+                          Want to find some new manga to read
                         </p>
                         <p class="subtitle">
                           <div class="box">
-                            Click below to find a new manga to read!
+                            <img src="assets/EVQbqVTUEAA9ZlG.jpg" alt="Denji and Power reading">
                           </div>
                           <a href="manga.html">
                             <button class="button is-outlined is-dark" >take me there!</button>
@@ -156,6 +118,6 @@ HTML:
           </section>
              
          
-        <script async defer src="./assets/home_script.js"></script>
+        <script src="script.js" async defer></script>
     </body>
 </html>
