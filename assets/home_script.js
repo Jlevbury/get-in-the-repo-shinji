@@ -2,40 +2,54 @@
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const resultDiv = document.getElementById("resultDiv");
+const searchForm = document.getElementById("searchForm");
 const searchHistoryDropdown = document.getElementById("searchHistoryDropdown");
-const animeOrMangaDropdown = document.getElementById("animeOrMangaDropdown");
+const dropdownContent = document.querySelector(".dropdown-content");
+const animeMangaDropdown = document.getElementById("anime-MangaDropdown");
 
-// Get search history from local storage
+// Initialize search history array from local storage or empty array
 let searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
-// Update the search history dropdown with saved search history
-function updateSearchHistoryDropdown() {
-  searchHistoryDropdown.innerHTML = "";
-  searchHistory.forEach((searchTerm) => {
-    const option = document.createElement("option");
-    option.value = searchTerm;
-    searchHistoryDropdown.appendChild(option);
-  });
-}
-
-// Add a search term to the search history array and update local storage and dropdown
-function addSearchTermToHistory(searchTerm) {
+// Update search history in local storage and dropdown menu
+const updateSearchHistory = () => {
+    // Clear the dropdown menu
+    dropdownContent.innerHTML = "";
+    // Loop through the search history array and add each search term to the dropdown menu
+    searchHistory.forEach((searchTerm) => {
+      const dropdownItem = document.createElement("a");
+      dropdownItem.classList.add("dropdown-item");
+      dropdownItem.textContent = searchTerm;
+      dropdownItem.addEventListener("click", () => {
+        searchInput.value = searchTerm;
+        searchButton.click();
+      });
+      dropdownContent.appendChild(dropdownItem);
+    });
+    // Save the updated search history array in local storage
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+  };
+  
+  // Add an event listener to the search form to capture search terms
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchTerm = searchInput.value;
+    // Add the search term to the search history array if it's not already there
     if (!searchHistory.includes(searchTerm)) {
       searchHistory.push(searchTerm);
-      localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-      updateSearchHistoryDropdown();
+      updateSearchHistory();
     }
-}
-
+    // Submit the search form
+    searchButton.click();
+  });
+  
+  // Call updateSearchHistory on page load to display search history
+  updateSearchHistory();
+  
 // Attach an event listener to the search button
 searchButton.addEventListener("click", async () => {
-  // Get the anime/manga name from the search input
-  const animeOrManga = animeOrMangaDropdown.value;
-  const animeOrMangaPath = (animeOrManga === "anime") ? "anime" : "manga";
-  const animeOrMangaDisplayName = (animeOrManga === "anime") ? "Anime" : "Manga";
-  const searchTerm = searchInput.value;
-  // Add the search term to the search history and update the dropdown
-  addSearchTermToHistory(searchTerm);  
+  // Get the anime name from the search input
+  const animeName = searchInput.value;
+
   // Set up the API URL and options
   const url = `https://myanimelist.p.rapidapi.com/anime/search/${animeName}/10`;
   const options = {
@@ -45,7 +59,28 @@ searchButton.addEventListener("click", async () => {
       "X-RapidAPI-Host": "myanimelist.p.rapidapi.com",
     },
   };
- // Fetch data from the API
+// Attach an event listener to the anime-MangaDropdown to capture user choice
+animeMangaDropdown.addEventListener("change", () => {
+    const animeMangaChoice = animeMangaDropdown.value;
+    // Modify the API URL based on the anime-MangaDropdown choice
+    const url = `https://myanimelist.p.rapidapi.com/${animeMangaChoice}/search/${animeName}/10`;
+    // Call the API with the modified URL
+    fetchAnime(url, options);
+  });
+  
+  // Extract the API call to a separate function
+  const fetchAnime = async (url, options) => {
+    try {
+      // Send a request to the API and get the response
+      const response = await fetch(url, options);
+      const result = await response.json();
+  
+      // ...rest of the code to generate HTML and display results...
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
   try {
     // Send a request to the API and get the response
     const response = await fetch(url, options);
@@ -100,3 +135,4 @@ searchButton.addEventListener("click", async () => {
     console.error(error);
   }
 });
+

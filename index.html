@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/bulma.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-  </head>
-  <body>
-    <nav class="level has-background-black" style="z-index: 10;">
-      <p class="level-item has-text-centered has-text-weight-semibold">
-        <a class="link is-info has-text-white" href="index.html">Home</a>
-      </p>
-      <p class="level-item has-text-centered has-text-weight-semibold">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="Anime Sensei" content="landing page for anime and manga tools">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/bulma.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <nav class="level has-background-black" style="z-index: 10;">
+          <p class="level-item has-text-centered has-text-weight-semibold">
+            <a class="link is-info has-text-white" href="index.html">Home</a>
+          </p>
+          <p class="level-item has-text-centered has-text-weight-semibold">
             <a class="link is-info has-text-white" href="anime.html">Anime assistant</a>
           </p>
           <p class="level-item has-text-centered has-text-weight-semibold">
@@ -30,13 +30,55 @@
         </nav>
         <div class="slideshow"> 
           <div class="slide" style="background-image: url('assets/gifs/tumblr_b02123422d3a01beceb04835b871cfc1_5ee27c2d_1280.gif')"></div>
-       
         </div>
-          
-         <section class="hero is-fullheight is-overlay" >
          
-            <div class="hero-body " >
-              
+         <section class="hero is-fullheight is-overlay" >         
+            <div class="hero-body " >  
+              <div class="column is-12">
+                <div class="card "  style="opacity: 0.85;">
+                  <div class="card-content has-text-centered ">
+                    <p class="title is-small">
+                     Search for any Anime or Manga title:
+                    </p>
+                    <form id="searchForm">
+                      <div class="field has-addons">
+                        <div class="control">
+                          <div class="select">
+                            <select id="anime-MangaDropdown">
+                              <option value="anime" id="animeChoice">Anime</option>
+                              <option value="manga" id="mangaChoice">Manga</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="control">
+                          <input class="input is-expanded" type="text" placeholder="Search anime.." id="searchInput">
+                        </div>
+                        <div class="control">
+                          <button class="button is-outlined is-dark" type="button" id="searchButton">Search</button>
+                        </div>
+                      </div>
+                    </form>
+                    <hr>
+                    <div id="searchHistory">
+                      <div id="searchHistoryDropdown" class="dropdown">
+                        <div class="dropdown-trigger">
+                          <button class="button is-light" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Search History</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                          <div class="dropdown-content">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-content" id="resultDiv">
+                      </div>
+                    </div>
+                  </div>
+                </div>                                                 
               <div class="container ">
                 <div class="columns is-centered">
                   <div class="column is-4">
@@ -63,35 +105,44 @@
                   <div class="column is-4">
                     <div class="card"  style="opacity: 0.95;">
                       <div class="card-content has-text-centered">
-                        <p class="title">
-                          Search MyAnimeList
+                        <p class="title is-size-5">
+                          Try out our anime assistant to find something new to watch!
                         </p>
-                        <form id="searchForm">
-                          <div class="field has-addons">
-                            <div class="control">
-                              <input class="input is-expanded" type="text" placeholder="Search anime.." id="searchInput">
-                            </div>
-                            <div class="control">
-                              <button class="button is-outlined is-dark" type="button" id="searchButton">Search</button>
-                            </div>
+                        <p class="subtitle">
+                          <div class="box">
+                            <img src="assets/anime_assist.png" alt="screenshot of app utility" >
                           </div>
-                        </form>
+                          <a href="anime.html">
+                          <button class="button is-outlined is-dark" >lets go!</button>
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="column is-4">
                     <div class="card" style="opacity: 0.85;">
                       <div class="card-content has-text-centered">
-                        <div class="card-content" id="resultDiv"></div>
+                        <p class="title">
+                          Screen shot and link directly to manga assistant
+                        </p>
+                        <p class="subtitle">
+                          <div class="box">
+                            Click below to find a new manga to read!
+                          </div>
+                          <a href="manga.html">
+                            <button class="button is-outlined is-dark" >take me there!</button>
+                            </a>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
           </section>
              
          
-        <script src="./assets/home_script.js" async defer></script>
+        <script async defer src="./assets/home_script.js"></script>
     </body>
 </html>

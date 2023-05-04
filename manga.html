@@ -9,7 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/bulma.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+      </head>
+
     <body>
         <nav class="level has-background-dark ">
             <p class="level-item has-text-centered has-text-weight-semibold">
@@ -27,96 +31,101 @@
               <a class="link is-info has-text-white" href="team.html">Team Picks</a>
             </p>
           </nav>
-          <section class="hero ">            
-            <div class="hero-body ">
-            <img src="assets/miika-laaksonen-nUL9aPgGvgM-unsplash.jpg" alt="https://unsplash.com/photos/nUL9aPgGvgM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" >  
-              <p class="title">
-               Manga 
-              </p>
-              <p class="subtitle">
-                Find out where your favorite anime got it's start, or find out where it's going! Grab some manga!
-              </p>
+          <section class="hero is-fullheight " style="background-image: url('assets/miika-laaksonen-nUL9aPgGvgM-unsplash.jpg'); background-size:cover; background-position: center;">            
+            <div class="hero-body has-text-centered">
+              <div class="tile is-ancestor  is-vertical is-centered has-text-centered">
+              <div class="tile is-parent is-centered">
+              <div class="tile has-background-grey-dark" style="opacity: 0.85;">
+                <div class="tile is-parent is-centered has-text-centered">
+                  <article class="tile is-child is-12 content is-large bulma-overlay-mixin">
+              <p class="title is-1 has-text-white-bis ">Manga</p>
+              <p class="subtitle has-text-white-bis ">Find out where your favorite anime got it's start, or find out where it's going! Grab some manga!</p> 
+              </article>
+            </div>
+              </div>
+            </div>
+              <div class=" tile is-child is-12 has-text-centered is-centered">
+                  <div class="columns has-text-centered">
+                    <div class="column is-4">
+                      <div class="card has-background-grey-dark has-text-white-bis" style="opacity: 0.85;">
+                        <div class="card-content has-text-centered  ">
+                          <p class="title has-text-white-bis">
+                            Pick a genre (there are plenty!)
+                          </p>
+
+                          <p class="subtitle">
+                            <div class="select is-multiple">
+                              <label class="label has-text-white-bis">Genre</label>
+                              <p class="control level-item">
+                                <select style="width:80%;" multiple>
+                                  <option value="manga">Top Manga</option>
+                                  <option value="oneshots">Oneshots</option>
+                                  <option value="novels">Novels</option>
+                                  <option value="manhwa">Manhwas</option>
+                                  <option value="favorite">Favorites</option>
+                                </select>
+                              </p>
+                              <button class="button is-outlined" id="mangaBtn" >Submit</button>
+                              <p is-small>hold CTRL for several</p>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                      <div class="card has-background-grey-dark" style="opacity: 0.85;">
+                        <div class="card-content has-text-centered has-text-white-bis">
+                          <p class="title has-text-white-bis">
+
+                             Give these a try!
+                            </p>
+                           <p class="subtitle">
+
+                          <div id="mangaResults">
+                            placeholder text
+                          
+                          </div> 
+                          </p>                                                                                 
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                      <div class="card has-background-grey-dark" style="opacity: 0.85;">
+                        <div class="card-content has-text-centered has-text-white-bis">
+                          <p class="title has-text-white-bis">
+                            Or try some of these fan favorites!
+                          </p>
+                          <p class="subtitle">
+                           <div id="popular">
+
+                           </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>  
+            </div>
             </div>
           </section>
           <div class="container">
             <div class="notification is-dark has-text-centered has-text-weight-semibold">
-              What is this right to left madness! Don't worry , heres the down and dirty to read a manga.
+               What is this right to left madness?! Don't worry , heres the down and dirty to read a manga.
+              </div>
+          </div>
+          <div class="container">
+            <div class="notification is-dark has-text-centered has-text-weight-semibold">
+              
               <iframe  width="560" height="315" src="https://www.youtube.com/embed/oHIsNd70nPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
           <div class="container">
             <p class="notification is-dark has-text-centered">NOW YOUR READY TO DIVE IN!!!</p>
             <P class="notification is-dark has-text-centered">see top manga rated manga list here or search for more bellow</P>
-            <div class="container">
-             
-                  <div class="container">
-                    <div class="columns is-centered">
-                      <div class="column is-4">
-                        <div class="card has-background-grey-dark has-text-white-bis">
-                          <div class="card-content has-text-centered  ">
-                            <p class="title has-text-white-bis">
-                              Pick a genre (there are plenty!)
-                            </p>
-                            <p class="subtitle">
-                              <div class="select is-multiple">
-                                <label class="label has-text-white-bis">Genre</label>
-                                <p class="control level-item">
-                                  <select style="width:80%;" multiple>
-                                    <option value="Action">Action</option>
-                                    <option value="Adventure">Adventure</option>
-                                    <option value="Avant Garde">Avant Garde</option>
-                                    <option value="Award Winning">Award Winning</option>
-                                    <option value="Comedy">Comedy</option>
-                                    <option value="Drama">Drama</option>
-                                    <option value="Fantasy">Fantasy</option>
-                                    <option value="Gourmet">Gourmet</option>
-                                    <option value="Horror">Horror</option>
-                                    <option value="Mystery">Mystery</option>
-                                    <option value="Romance">Romance</option>
-                                    <option value="Sci-Fi">Sci-Fi</option>
-                                    <option value="Slice of Life">Slice of Life</option>
-                                    <option value="Sports">Sports</option>
-                                    <option value="Supernatural">Supernatural</option>
-                                    <option value="Suspense">Suspense</option>
-                                  </select>
-                                </p>
-                                <button class="button is-outlined" >Submit</button>
-                                <p is-small>hold CTRL for several</p>
-                              </div>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="column is-4">
-                        <div class="card has-background-grey-dark ">
-                          <div class="card-content has-text-centered has-text-white-bis">
-                            <p class="title has-text-white-bis">
-                              Give these a try!
-                            </p>
-                            <p class="subtitle">
-                              queried results post here
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="column is-4">
-                        <div class="card has-background-grey-dark">
-                          <div class="card-content has-text-centered has-text-white-bis">
-                            <p class="title has-text-white-bis">
-                              Or try some of these fan favorites!
-                            </p>
-                            <p class="subtitle">
-                              most popular manga from API go here
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-             
-              
-
-          </div>
-        <script src="script.js" async defer></script>
+            
+        <script src="assets/manga_script.js" async defer></script>
     </body>
 </html>
+

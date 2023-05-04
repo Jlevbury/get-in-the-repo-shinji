@@ -5,14 +5,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <meta name="description" content="">
+        <meta name="Anime Assistant" content="Anime selection tool">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/bulma.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         
     </head>
     <body>
-      <nav class="level has-background-dark">
+      <nav class="level has-background-black">
         <p class="level-item has-text-centered has-text-weight-semibold">
           <a class="link is-info has-text-white" href="index.html">Home</a>
         </p>
@@ -31,8 +33,80 @@
       </nav>
           <section class="hero is-fullheight" style="background-image: url('assets/anime-background.png')">
             <div class="hero-body">
+              <div class="container">
+                <div class="columns is-centered">
+                  <div class="column is-4">
+                    <div class="card" style="opacity: 0.85;">
+                      <div class="card-content has-text-centered">
+                        <p class="title is-small">
+                          Pick a genre (there are plenty!)
+                        </p>
+                        
+                        <p class="subtitle">
+                          <label class="label">Choose below for suggestions!</label>
+                          <div class="select is-multiple is-centered">
+                            <select multiple size="8">                              
+                              <option value="all" id="all">Top Series</option>
+                              <option value="airing" id="airing">Top Airing</option>
+                              <option value="upcoming" id="upcoming">Top Upcoming</option>
+                              <option value="tv" id="tv">Top TV Series</option>
+                              <option value="ova" id="ova">OVA*</option>
+                              <option value="movie" id="movie">Top Anime Movie</option>
+                              <option value="special" id="special">Anime Specials</option>
+                            </select>
+                            
+                            <br>
+                            <div class="box">
+                              
+                            <button class="button is-outlined is-dark" id="animeBtn" >Submit</button>
 
+                          </div>
+                          <p>*OVA - Original video animation (this is content created specifically for the Anime and does not use manga source material.) </p>
+                            
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-4">
+                    <div class="card" style="opacity: 0.85;">
+                      <div class="card-content has-text-centered">
+                        <p class="title">
+                          Give these a try!
+                        </p>
+                        <p class="subtitle">
+                          
+                            <div id="animeResult">
+                           
+                            
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-4">
+                    <div class="card" style="opacity: 0.85;">
+                      <div class="card-content has-text-centered">
+                        <p class="title">
+                          Or try some of these fan favorites!
+                        </p>
+                        <p class="subtitle">
+                          <div id="popular">
+                           
+                            
+                            </ul>
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
- 
+          
+           
+          
+        <script src="assets/anime_script.js" async defer></script>
     </body>
 </html>

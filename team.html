@@ -1,85 +1,162 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/bulma.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    </head>
-    <body>
-        <nav class="level has-background-dark ">
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="index.html">Home</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="anime.html">Anime assistant</a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <img src="assets/page logo.png" alt="anime sensei page logo" style="height:75px" >
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="manga.html">Manga </a>
-            </p>
-            <p class="level-item has-text-centered has-text-weight-semibold">
-              <a class="link is-info has-text-white" href="team.html">Team Picks</a>
-            </p>
-          </nav>
-          <section class="hero ">            
-            <div class="hero-body">
-            <img src="" alt="">  
-              <p class="title">
-                Team Recommendations
-              </p>
-              <p class="subtitle">
-                Want to know what picks the team puts at the top of the list? Take a look at our references and find the arc that suites your taste!
-              </p>
-            </div>
-          </section>
-          <div class="container">
-            <div class="notification has-background-info">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">Dominick's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header>  
-                    </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-          <div class="container">
-            <div class="notification has-background-danger">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">James's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header> 
-                      </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-          <div class="container">
-            <div class="notification has-background-info">
-                <div class="card">
-                    <header class="card-header">
-                        <p class="card-header-title">Jesse's Picks</p>
-                    <div class="card-content">
-                      <div class="content">
-                        Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                      </header> 
-                      </div>
-                    </div>
-                  </div>                  
-            </div>
-          </div>
-        <script src="script.js" async defer></script>
-    </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<title></title>
+		<meta
+			name="description"
+			content=""
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/bulma.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/style.css"
+		/>
+	</head>
+	<body
+		style="
+			background-image: url(assets/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg);
+			background-size: contain;
+		"
+	>
+		<nav class="level has-background-black">
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="index.html"
+					>Home</a
+				>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="anime.html"
+					>Anime assistant</a
+				>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<img
+					src="assets/page logo.png"
+					alt="anime sensei page logo"
+					style="height: 75px"
+				/>
+			</p>
+
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="manga.html"
+					>Manga
+				</a>
+			</p>
+			<p class="level-item has-text-centered has-text-weight-semibold">
+				<a
+					class="link is-info has-text-white"
+					href="team.html"
+					>Team Picks</a
+				>
+			</p>
+		</nav>
+		<section class="hero">
+			<div
+				class="hero-body is-outlined has-background-grey-dark"
+				style="opacity: 0.85"
+			>
+				<img
+					src=""
+					alt=""
+				/>
+				<p class="title has-text-white">Team Recommendations</p>
+				<p class="subtitle has-text-white">
+					Want to know what picks the team puts at the top of the list? Take a
+					look at our references and find the genres that suites your taste!
+				</p>
+			</div>
+		</section>
+		<br />
+		<div class="columns">
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.90"
+				>
+					<div class="card-image">
+						<figure class="image is-2by1">
+							<img
+								src="path/to/image1.jpg"
+								alt="Image 1"
+							/>
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="content has-text-centered">
+							<p>Dominick's picks</p>
+							<p>PLACEHOLDER FOR PERSONAL RECS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.90"
+				>
+					<div class="card-image">
+						<figure class="image is-2by2"><img src='assets/Ultraman_2011_Manga.png' alt="a manga panel of the ultraman character"></figure>
+					</div>
+					<div class="card-content">
+						<div class="content has-text-centered">
+							<p style="background-color: #1d1a2f color#8bd450">James' picks</p>
+							<p>A fan of kaiju, mechs, and cel animation that killed animators, I have to recommend anime of the late 80's/early 90's titles such as <i>Bubblegum Crisis, Dominion Tank Police, Patlabor and Gundam:zeta and double zeta</i> additionally this era of anime is incomplete without sticking your toes in the waters of <i>Macross / robotech</i>. These pioneering series brought many of the common animation techniques seen in modern anime into existence, <a href="https://youtu.be/pgwORRFIiuE" >(Ex.Itano Circus:Missle Massacre)</a>.</p>
+							<p>With the glut of manga available to read theres tons of choices available, I can recommend <i>Chainsaw Man</i>, in case you've been living under a rock. Or a completed series such as <i>Dorohedoro</i> , if a grimey world of wizards, slapstick humor and the occasional beheading suit you. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-4">
+				<div
+					class="card"
+					style="opacity: 0.90"
+				>
+					<div class="card-image">
+						<figure class="image is-2by2"><img src="assets/animesher.com_edward-elric-monocrome-chess-447151.jpg" alt="Edward and Alphonse Elric sitting by a chess board"></figure>
+							
+						
+					</div>
+					<div class="card-content is-centered">
+						<div class="content has-text-centered">
+							<p>Jesse's picks</p>
+							<p>As a big fan of sci-fi, fantasy, and Isakai, there are so many things I could recommend. With my start being in mid 90's to early 2000's my gut always go's to classics like <i>YuYu Hakusho</i>, <i>Rurouni Kenshin</i>, and <i>FLCL</i>. but in recent years shows like <i>Psycho-Pass</i>, <i>Jujutsu Kaisen</i>, <i>The RIsing of the Sheild Hero</i>, and <i>To your Eternity</i> have 100% made a lasting impresson on me and i cant recommend them enough. </p>
+							<p>Now even with all that said I do generally prefer to read Manga. For example wile <i>Berserk</i> is an increadable story that never quite got an amazing anime or <i>FullMetal Alchemist</i> witch does have two adaptaions that are great in their own right, in my opinion the manga is my prefered experience. also there are many amazing storys that just havent been adapted yet. things like <i>DanDaDan</i> witch is writen by a former assistant to the now renound creater of <i>Chainsaw Man</i>. some other recent favorites of mine include <i>Kaiju No. 8</i>, <i>Frieren: Beyond Journey's End</i>, and last but sertanly not least <i>Solo Leveling</i>. wile the latter is a manwa it tends to be the thing I recomend most and I needded to at least mention it and all its crazy power fantasy fun.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="script.js"
+			async
+			defer
+		></script>
+	</body>
 </html>
+
