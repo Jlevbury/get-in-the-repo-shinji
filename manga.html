@@ -49,25 +49,25 @@
                     <div class="column is-4">
                       <div class="card has-background-grey-dark has-text-white-bis" style="opacity: 0.85;">
                         <div class="card-content has-text-centered  ">
-                          <p class="title has-text-white-bis">
-                            Pick a genre (there are plenty!)
+                          <p class="title is-3 has-text-white-bis">
+                            Take your pick 
                           </p>
+                          <p class="title is-4 has-text-white-bis">(there are plenty!)</p>
 
                           <p class="subtitle">
                             <div class="select is-multiple">
-                              <label class="label has-text-white-bis">Genre</label>
+                              <label class="label has-text-white-bis">Types</label>
                               <p class="control level-item">
                                 <select style="width:80%;" multiple>
                                   <option value="manga">Top Manga</option>
                                   <option value="oneshots">Oneshots</option>
                                   <option value="novels">Novels</option>
                                   <option value="manhwa">Manhwas</option>
-                                  <option value="bypopularity">Popular</option>
                                   <option value="favorite">Favorites</option>
                                 </select>
                               </p>
                               <button class="button is-outlined" id="mangaBtn" >Submit</button>
-                              <p is-small>hold CTRL for several</p>
+                              <p is-small></p>
                             </div>
                           </p>
                         </div>
@@ -83,7 +83,7 @@
                            <p class="subtitle">
 
                           <div id="mangaResults">
-                            placeholder text
+                            
                           
                           </div> 
                           </p>                                                                                 
@@ -98,7 +98,10 @@
                             Or try some of these fan favorites!
                           </p>
                           <p class="subtitle">
-                            most popular manga from API go here
+                           <div id="popular">
+
+                           </div>
+
                           </p>
                         </div>
                       </div>
@@ -110,13 +113,19 @@
           </section>
           <div class="container">
             <div class="notification is-dark has-text-centered has-text-weight-semibold">
-              What is this right to left madness! Don't worry , heres the down and dirty to read a manga.
+               What is this right to left madness?! Don't worry , heres the down and dirty to read a manga.
+              </div>
+          </div>
+          <div class="container">
+            <div class="notification is-dark has-text-centered has-text-weight-semibold">
+              
               <iframe  width="560" height="315" src="https://www.youtube.com/embed/oHIsNd70nPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
           <div class="container">
             <p class="notification is-dark has-text-centered">NOW YOUR READY TO DIVE IN!!!</p>
-            <P class="notification is-dark has-text-centered">see top manga rated manga list here or search for more bellow</P>
+            <!--in future this will be an area to search by title and or genre -->
+            <!-- <P class="notification is-dark has-text-centered">didnt find what you where looking for? search spesific titles blow.</P> -->
             
         <script src="assets/manga_script.js" async defer></script>
     </body>

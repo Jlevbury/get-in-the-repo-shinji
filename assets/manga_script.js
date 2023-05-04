@@ -88,4 +88,44 @@ async function fetchMangaData(selectedValues, apiUrl, headers) {
   }
 
 
+  const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://myanimelist.p.rapidapi.com/manga/top/bypopularity',
+	method: 'GET',
+	headers: {
+	  'X-RapidAPI-Key': '2a8860bed8mshb5bc10768805e3dp1aad13jsn412b7483e58a',
+	  'X-RapidAPI-Host': 'myanimelist.p.rapidapi.com'
+	}
+  };
   
+  $.ajax(settings).done(function (response) {
+	// Return only the first 5 items of the response array
+	const top5manga = response.slice(0, 5);
+	console.log(top5manga);
+	// Get the results div element
+	const popularDiv = document.getElementById("popular");
+	// Clear previous results
+	popularDiv.innerHTML = '';
+
+	// Loop through the mangaData array and create elements for each item
+	top5manga.forEach((item) => {
+		// Create a container div element for the item
+		const itemDiv = document.createElement("div");
+		itemDiv.className = "manga-item";
+	
+		// Set the content of the item div with separate elements for each property
+		itemDiv.innerHTML = `
+		  <h3>${item.title}</h3>
+		  <img src="${item.picture_url}" alt="${item.title}">
+		  <p>Rank: ${item.rank}</p>
+		  <p>Type: ${item.type}</p>
+		  <p>Aired on: ${item.aired_on}</p>
+		`;
+	
+		// Append the item div to the results div
+		popularDiv.appendChild(itemDiv);
+	  });
+
+
+  });
