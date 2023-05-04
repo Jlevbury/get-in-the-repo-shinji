@@ -87,7 +87,7 @@ result.forEach((anime, index) => {
   // Add the HTML for the current anime to the table cell
   tableCell.innerHTML = `
     <div class="column">
-      <a href=${anime.myanimelist_url} target="_blank">
+      <a href="https://www.youtube.com/results?search_query=${anime.title}+trailer" target="_blank">
         <img src=${anime.picture_url} alt=${anime.title} />
       </a>
       <h3 class="has-text-weight-bold">${anime.title}</h3>
