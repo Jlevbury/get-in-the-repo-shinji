@@ -35,15 +35,26 @@ N/A
 
 
 ![Screenshot (86)](https://user-images.githubusercontent.com/125767916/236344286-8ba9c62b-d1c6-40e2-abe9-bd691154d33c.png)
+
+The user can enter a title they would like to research.
+
 ![Screenshot (87)](https://user-images.githubusercontent.com/125767916/236344529-dcd75f35-dfc4-4955-b31c-3af57f85a8f0.png)
+The search bar will return results for that title, a brief description and a link to the the My Anime List page for that title.
+
 ![Screenshot (88)](https://user-images.githubusercontent.com/125767916/236344643-fe0c4c6d-9ad9-404e-911d-ae8cb7b63c69.png)
-Screen shots of the landing page search function.
+Additionally, the user can click on the image of the title and be taken to a youtube search  result for that specific title.
+
+![Screenshot (89)](https://user-images.githubusercontent.com/125767916/236351273-167fd428-d4ce-4aec-8b45-86f06f7c7cb2.png)
+
 
 The typical user flow for the Anime Assitant.
+![AAscreencap](https://user-images.githubusercontent.com/125767916/236351415-56eb0c8c-3588-41cb-92cb-a82a3eaba8cb.gif)
 
-![MANscreencap](https://user-images.githubusercontent.com/125767916/236020708-42e95c27-5208-4c6d-9670-36311edbf458.gif)
 
 The typical user flow for the Manga finder.
+![MANscreencap](https://user-images.githubusercontent.com/125767916/236020708-42e95c27-5208-4c6d-9670-36311edbf458.gif)
+
+
 
 ## Credits
 Stock images and background used under a creative commons license via UNSPLASH.COM
